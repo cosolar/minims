@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>极简软件 Minims · 把复杂留给自己，把简单留给你</title>
+    <meta
+      name="description"
+      content="极简软件 Minims 是 Cosolar 维护的开源软件集合：MiniDocs 极简知识库、极简笔记 Halo 主题、MiniWho 极简简历。全部开源、可自托管，没有广告与付费墙。"
+    />
+    <meta name="keywords" content="极简软件,Minims,MiniDocs,极简知识库,极简笔记,halo-theme-cosolar,MiniWho,极简简历,开源,自托管" />
+    <meta name="author" content="Cosolar" />
+    <meta name="theme-color" content="#f7f5ef" id="theme-color" />
+    <link rel="canonical" href="https://www.minims.cn/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="极简软件 Minims" />
+    <meta property="og:title" content="极简软件 Minims · 把复杂留给自己，把简单留给你" />
+    <meta
+      property="og:description"
+      content="三款开源、可自托管的极简工具：知识库、博客主题与在线简历。没有广告，没有付费墙。"
+    />
+    <meta property="og:url" content="https://www.minims.cn/" />
+    <meta property="og:image" content="https://www.minims.cn/og-cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="极简软件 Minims：把复杂留给自己，把简单留给你。三款开源、可自托管的效率工具。" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="极简软件 Minims" />
+    <meta name="twitter:description" content="把复杂留给自己，把简单留给你。三款开源、可自托管的极简工具。" />
+    <meta name="twitter:image" content="https://www.minims.cn/og-cover.png" />
+    <meta name="twitter:image:alt" content="极简软件 Minims：三款开源、可自托管的效率工具。" />
+
+    <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fastly.jsdelivr.net/npm/@fontsource-variable/noto-serif-sc@5.2.5/wght.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fastly.jsdelivr.net/npm/misans-webfont@4.3.1/misans/misans-regular/result.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fontsource-variable/noto-serif-sc@5.2.5/wght.css" />
+    </noscript>
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('minims-theme')
+          var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          var theme = saved === 'light' || saved === 'dark' ? saved : systemDark ? 'dark' : 'light'
+          var root = document.documentElement
+          root.dataset.theme = theme
+          root.classList.toggle('dark', theme === 'dark')
+          root.style.colorScheme = theme
+          var meta = document.getElementById('theme-color')
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f1310' : '#f7f5ef')
+        } catch (e) {}
+      })()
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "极简软件 Minims",
+            "url": "https://www.minims.cn/",
+            "logo": "https://www.minims.cn/favicon.svg",
+            "sameAs": ["https://github.com/cosolar"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "MiniDocs 极简知识库",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://docs.minims.cn",
+            "description": "开源、可自托管的 Markdown 知识库，支持多知识库、树形目录、全文检索与可控分享。",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "halo-theme-cosolar 极简笔记",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Halo 2.x",
+            "url": "https://note.minims.cn",
+            "description": "为技术写作者设计的 Halo 博客主题，内容优先、明暗双模、悬浮目录与阅读进度。",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "MiniWho 极简简历",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://who.minims.cn",
+            "description": "开源、免费、可自托管的在线简历工作台，结构化编辑、A4 模板与服务端 PDF 导出。",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
